@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.FeatureManagement;
 using ProjetoContratos.Domain.DTO;
 using ProjetoContratos.Domain.Interface.Service;
 using System;
@@ -18,12 +19,14 @@ namespace ProjetoContratos.API.Controllers
 
         private readonly IContratoService _contratoService;
         private readonly IMemoryCache _cache;
-        private static string Contratos { get { return "_Contratos"; } }
+        private readonly IFeatureManager _featureManager;
+        private const string Contratos = "_Contratos";
 
-        public ContratosController(IContratoService contratoService)
+        public ContratosController(IContratoService contratoService, IMemoryCache cache, IFeatureManager featureManager)
         {
             _contratoService = contratoService;
-            _cache = new MemoryCache(new MemoryCacheOptions());
+            _cache = cache;
+            _featureManager = featureManager;
         }
 
         // GET: api/<ContratosController>
@@ -42,7 +45,10 @@ namespace ProjetoContratos.API.Controllers
             {
                 contrato = await _contratoService.GetAsync(id);
 
-                _cache.Set(Contratos, contrato, DateTime.Now.Date.AddDays(1));
+                if (await _featureManager.IsEnabledAsync("CacheEnabled"))
+                {
+                    _cache.Set(Contratos, contrato, DateTime.Now.Date.AddDays(1));
+                }
             }
             return contrato;
         }

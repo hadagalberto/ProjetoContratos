@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.FeatureManagement;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 using ProjetoContratos.Infra.Data.Context;
@@ -32,6 +33,10 @@ namespace ProjetoContratos.API
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 options.SerializerSettings.Converters.Add(new StringEnumConverter());
             });
+
+            services.AddMemoryCache();
+            services.AddFeatureManagement(Configuration.GetSection("FeatureManagement"));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjetoContratos.API", Version = "v1" });
