@@ -48,7 +48,7 @@ namespace ProjetoContratos.Infra.Data.Repository
             int num = await Context.SaveChangesAsync();
         }
 
-        public async Task<ICollection<TEntity>> ListAsync()
+        public virtual async Task<ICollection<TEntity>> ListAsync()
         {
             return await EntitySet.ToListAsync();
         }

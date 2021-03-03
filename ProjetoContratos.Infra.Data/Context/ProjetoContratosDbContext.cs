@@ -8,7 +8,6 @@ namespace ProjetoContratos.Infra.Data.Context
 
         public ProjetoContratosDbContext(DbContextOptions<ProjetoContratosDbContext> options) : base(options)
         {
-            
         }
 
         public DbSet<Contrato> Contratos { get; set; }

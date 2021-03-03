@@ -11,7 +11,7 @@ namespace ProjetoContratos.Domain.DTO
         public DateTime? DataPagamento { get; set; }
         public double Valor { get; set; }
 
-        public StatusPrestacao Status { get => DataPagamento != null ? StatusPrestacao.Baixada : DataVencimento < DateTime.Now ? StatusPrestacao.Atrasada : StatusPrestacao.Aberta; }
+        public StatusPrestacao Status { get => DataPagamento != null ? StatusPrestacao.Baixada : DataVencimento.Date >= DateTime.Now.Date ? StatusPrestacao.Aberta : StatusPrestacao.Atrasada; }
 
         public long IdContrato { get; set; }
         public ContratoDto Contrato { get; set; }

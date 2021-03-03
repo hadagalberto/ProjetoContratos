@@ -13,8 +13,19 @@ namespace ProjetoContratos.Domain.Service
 {
     public class PrestacaoService : BaseService<PrestacaoDto, Prestacao>, IPrestacaoService
     {
+
+        private readonly IPrestacaoRepository _repository;
+        private readonly IMapper _mapper;
+
         public PrestacaoService(IPrestacaoRepository repository, IMapper mapper) : base(repository, mapper)
         {
+            _repository = repository;
+            _mapper = mapper;
+        }
+
+        public async Task<ICollection<PrestacaoDto>> ListByContratoAsync(long idContrato)
+        {
+            return _mapper.Map<List<PrestacaoDto>>(await _repository.ListByContratoAsync(idContrato));
         }
     }
 }

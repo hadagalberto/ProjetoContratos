@@ -10,5 +10,8 @@ namespace ProjetoContratos.Domain.Interface.Service
 {
     public interface IPrestacaoService : IBaseService<PrestacaoDto, Prestacao>
     {
+
+        Task<ICollection<PrestacaoDto>> ListByContratoAsync(long idContrato);
+
     }
 }

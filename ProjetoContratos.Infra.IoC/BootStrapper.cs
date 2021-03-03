@@ -30,6 +30,9 @@ namespace ProjetoContratos.Infra.IoC
             {
                 mapperConfig.CreateMap<Contrato, ContratoDto>()
                     .ReverseMap();
+                mapperConfig.CreateMap<CreateContratoDto, ContratoDto>()
+                    .ForMember(dest => dest.Id, src => src.Ignore())
+                    .ForMember(dest => dest.Prestacoes, src => src.Ignore());
                 mapperConfig.CreateMap<Prestacao, PrestacaoDto>()
                     .ForMember(dest => dest.Status, src => src.Ignore())
                     .ReverseMap();

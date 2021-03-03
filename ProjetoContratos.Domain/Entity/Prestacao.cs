@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ProjetoContratos.Domain.Entity
@@ -15,7 +16,8 @@ namespace ProjetoContratos.Domain.Entity
         public double Valor { get; set; }
 
         public long IdContrato { get; set; }
-        public Contrato Contrato { get; set; }
+        [JsonIgnore]
+        public virtual Contrato Contrato { get; set; }
 
     }
 }

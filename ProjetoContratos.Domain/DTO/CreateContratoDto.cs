@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjetoContratos.Domain.Entity
+namespace ProjetoContratos.Domain.DTO
 {
-    public class Contrato
+    public class CreateContratoDto
     {
 
-        public long Id { get; set; }
         public DateTime DataContratacao { get; set; }
         public int QuantidadeParcelas { get; set; }
         public double ValorFinanciado { get; set; }
-
-        public virtual ICollection<Prestacao> Prestacoes { get; set; }
 
     }
 }
