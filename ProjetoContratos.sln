@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - ProjetoContratos.Domain", "2 - ProjetoContratos.Domain", "{5FA50EAA-8BB1-4342-A186-0ED28D36E785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoContratos.Domain", "ProjetoContratos.Domain\ProjetoContratos.Domain.csproj", "{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - ProjetoContratos.Infra", "3 - ProjetoContratos.Infra", "{BB84B149-7811-4244-B2BC-707777E34E3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - ProjetoContratos.Tests", "4 - ProjetoContratos.Tests", "{BFB8C942-7938-429A-90A6-65228F32F469}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - ProjetoContratos.Infra.Data", "3.1 - ProjetoContratos.Infra.Data", "{5490E5D0-8549-45FD-ADCF-F7659F0760FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - ProjetoContratos.Infra.IoC", "3.2 - ProjetoContratos.Infra.IoC", "{6705CA83-2F3E-4834-BE4D-71BD98B80781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoContratos.Test", "ProjetoContratos.Test\ProjetoContratos.Test.csproj", "{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoContratos.Infra.Data", "ProjetoContratos.Infra.Data\ProjetoContratos.Infra.Data.csproj", "{6C988A81-8D81-4885-9820-1A6E9C3DFB5A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D} = {02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoContratos.Infra.IoC", "ProjetoContratos.Infra.IoC\ProjetoContratos.Infra.IoC.csproj", "{21A3A245-F07F-4255-9352-05667CF3D691}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - ProjetoContratos.API", "1 - ProjetoContratos.API", "{39BE2536-C92C-4CC3-9DEF-38B827F40C7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoContratos.API", "ProjetoContratos.API\ProjetoContratos.API.csproj", "{2E1937D0-CFF9-4396-9861-EA1B7356DDCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C988A81-8D81-4885-9820-1A6E9C3DFB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C988A81-8D81-4885-9820-1A6E9C3DFB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C988A81-8D81-4885-9820-1A6E9C3DFB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C988A81-8D81-4885-9820-1A6E9C3DFB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A3A245-F07F-4255-9352-05667CF3D691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A3A245-F07F-4255-9352-05667CF3D691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A3A245-F07F-4255-9352-05667CF3D691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A3A245-F07F-4255-9352-05667CF3D691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1937D0-CFF9-4396-9861-EA1B7356DDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1937D0-CFF9-4396-9861-EA1B7356DDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1937D0-CFF9-4396-9861-EA1B7356DDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1937D0-CFF9-4396-9861-EA1B7356DDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02239C5E-D97B-41A3-8EB1-83D9CCA62C6D} = {5FA50EAA-8BB1-4342-A186-0ED28D36E785}
+		{5490E5D0-8549-45FD-ADCF-F7659F0760FE} = {BB84B149-7811-4244-B2BC-707777E34E3B}
+		{6705CA83-2F3E-4834-BE4D-71BD98B80781} = {BB84B149-7811-4244-B2BC-707777E34E3B}
+		{91A475E3-CD1C-4C4D-9C3E-1A8A2A22B4D6} = {BFB8C942-7938-429A-90A6-65228F32F469}
+		{6C988A81-8D81-4885-9820-1A6E9C3DFB5A} = {5490E5D0-8549-45FD-ADCF-F7659F0760FE}
+		{21A3A245-F07F-4255-9352-05667CF3D691} = {6705CA83-2F3E-4834-BE4D-71BD98B80781}
+		{2E1937D0-CFF9-4396-9861-EA1B7356DDCF} = {39BE2536-C92C-4CC3-9DEF-38B827F40C7E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EE5D924-D9A2-4597-903F-5D9A494894F7}
+	EndGlobalSection
+EndGlobal
