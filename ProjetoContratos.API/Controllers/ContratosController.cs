@@ -41,7 +41,7 @@ namespace ProjetoContratos.API.Controllers
         public async Task<ContratoDto> Get(long id)
         {
             ContratoDto contrato;
-            if (!_cache.TryGetValue(Contratos, out contrato))
+            if (!_cache.TryGetValue($"{Contratos}{id}", out contrato))
             {
                 contrato = await _contratoService.GetAsync(id);
 
