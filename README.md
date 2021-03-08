@@ -8,7 +8,7 @@ O InMemoryDb foi usado como banco de dados.
 
 Aplicados princípios SOLID e Clean Code.
 
-Testes unitários com nUnit para validar regra do campo status da prestação.
+Testes unitários com NUnit para validar regra do campo status da prestação.
 
 Foram criados repositórios e serviços genéricos.
 
